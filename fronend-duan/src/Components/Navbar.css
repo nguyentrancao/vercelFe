@@ -1,0 +1,50 @@
+
+.header-bar.focused {
+  display: none; 
+}
+.input-bar.focused {
+  width: 800px;
+}
+.input-bar-talest.focused {
+  width: 470px;
+}
+.input-bar-mobie.focused {
+  width: 330px;
+}
+.prodPriceSale{
+  font-weight: 400;
+text-decoration: line-through;
+margin-left: 15px;
+
+}
+.prodPrice{
+  font-weight: 400;
+  color: #555;
+  color: red;
+}
+
+.hoverText:hover{
+text-decoration: underline;
+cursor: "pointer";
+}
+.flex-container{
+     width: 80%;
+      justify-content:space-between;
+      align-items: center;
+      margin: auto;
+      background-color: #FFFFFF;
+      padding: 5px;
+}
+#flex-container{
+width: 80%;
+ justify-content:center;
+ align-items: center;
+ margin: auto;
+ background-color: #4a90e2;
+ padding: 5px;
+ gap:10px;
+}
+nav.nav-bar--hidden {
+transform: translateY(-100%);
+}
+

@@ -1,0 +1,217 @@
+
+
+.headingHome {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .headingHome::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .headingHome:hover::after {
+    width: 100%;
+  }
+  
+  
+  .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #FB6714;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #92897d;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.cateName:hover{
+  color: blue;
+}
+.cart-icon {
+  transition: transform 0.2s; /* Thêm hiệu ứng transition */
+}
+
+.cart-icon:hover {
+  transform: scale(1.2); /* Khi hover, icon sẽ phóng to lên 1.2 lần kích thước ban đầu */
+  color: #4f69ee;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+} 
+
+/* itemcard 1 */
+@media(max-width:800px){
+    .bannercenter{
+      display: none;
+    }
+    .time{
+        display: none;
+    }
+    .bannerheader{
+      height: auto;
+    }
+      
+    
+    .cateFuture{
+      display: none;
+    }
+    .bannerPr{
+      display: none;
+    }
+    
+   
+  }
+@media(max-width:1204px){
+  .BannerTrai{
+    display: none;
+  }
+ 
+  .BannerPhai{
+    width: 500px;
+    height: 120px;
+   ;
+  }
+  .descDV{
+    display: none;
+  }
+
+  
+}
+.BannerTrai,
+.BannerPhai {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+/* backtotopbutton */.back-to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+
+  z-index: 99;
+  font-size: 16px;
+  border: 2px solid #555 ;
+  outline: none;
+ 
+  color: white;
+  cursor: pointer;
+  
+  border-radius: 50%;
+}
+
+.back-to-top-button.visible {
+  display: block;
+}
+
+
+
+/* Style for option */
+.option-select {
+  font-family: Arial, sans-serif;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+.options button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  /* transition: background 0.3s ease; */
+  transition: all 0.3s ease;
+}
+
+.options button:hover {
+  transform: scale(1.1);
+  color: #0078d4;
+}
+
+.options .selected {
+  color: #0078d4;
+  border-bottom: 2px solid #0078d4;
+}
+
+
+.heading{
+  padding-top: 25px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+}
+.amin{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+  100%{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  
+}

@@ -1,0 +1,38 @@
+.my-order {
+  /* Tùy chỉnh giao diện cho trang MyOrder */
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+header h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+/* Tùy chỉnh các thành phần khác trong trang */
+.p-image{
+  position: absolute;
+  top: auto;
+  right: 8px;
+  bottom: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+  background: var(--iq-primary);
+  color: var(--iq-white);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Responsive cho trang MyOrder */
+@media (max-width: 768px) {
+  .phuongthuc {
+    display: block;
+  }
+}
